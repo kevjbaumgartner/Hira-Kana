@@ -227,8 +227,33 @@ function endRound(){
 	$("#presentArea").addClass("opacityHide");
 }
 
+//increaseSize(value to increase choiceSize by)
+function increaseSize(val){
+	choiceSize += parseInt(val);
+	updateSize();
+	if(choiceSize == 10){
+		$("#sizeUp").addClass("inactiveButton")
+	}
+	else{
+		$("#sizeUp").removeClass("inactiveButton")
+		$("#sizeDown").removeClass("inactiveButton")
+	}
+}
+
+//decreaseSize(value to decrease choiceSize by)
+function decreaseSize(val){
+	choiceSize -= parseInt(val);
+	updateSize();
+	if(choiceSize == 2){
+		$("#sizeDown").addClass("inactiveButton")
+	}
+	else{
+		$("#sizeDown").removeClass("inactiveButton")
+		$("#sizeUp").removeClass("inactiveButton")
+	}
+}
+
 //updateSize(desired choiceSize value)
-function updateSize(size){
-	choiceSize = parseInt(size);
+function updateSize(){
 	$("#sizeNum").text(choiceSize);
 }
