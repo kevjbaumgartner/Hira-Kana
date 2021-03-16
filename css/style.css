@@ -47,7 +47,7 @@
 
 /* Document Stylization */
 html{
-	background-color: #DFDFDF;
+	background-color: #FAFAFA;
 	font-family: "Roboto-Regular";
 }
 
@@ -93,8 +93,10 @@ html{
 }
 
 .chosen{
-	background-color: #212121 !important;
+	background-color: #9D2933 !important;
 	color: #FAFAFA !important;
+	transform: translate3d(0px, 2px, 0px);
+	box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.15), 1.5px 1px 0px 0px rgba(107, 29, 21, 0.5) !important;
 }
 
 #fontSample{
@@ -122,16 +124,16 @@ html{
 	transition: all 0.2s ease-in-out;
 	padding: 0;
 	margin: 0;
-	box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.10);
+	box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.25);
 	background-color: #FAFAFA;
-	border: 1px solid #DFDFDF;
 	border-radius: 5px;
 }
 
 #settingsHeader{
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 1vw;
 	padding: 1.5vh 0vw 1.5vh 0vw;
+	font-weight: bold;
 }
 
 .settingsTableLabel{
@@ -148,12 +150,15 @@ html{
 
 .langOneButton, .langTwoButton{
 	display: inline-block;
-	padding: 1.25vh 0.75vw;
+	padding: 1vh 0.5vw;
 	cursor: pointer;
-	transition: all 0.2s ease-in-out;
 	background-color: #FAFAFA;
-	outline: 1px solid #DFDFDF;
-	margin: 0vh 1vw;
+	margin: 0vh 0.5vw;
+	border-radius: 5px;
+	box-shadow: 4px 4px 3px 0.5px rgba(0, 0, 0, 0.15), 1.5px 3px 0px 0px rgba(0, 0, 0, 0.4);
+	font-weight: bold;
+	font-size: 0.75vw;
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .langOneButton:nth-last-of-type(3), .langTwoButton:nth-last-of-type(3){
@@ -165,8 +170,8 @@ html{
 }
 
 .langOneButton:hover , .langTwoButton:hover{
-	background-color: #212121;
-	color: #FAFAFA;
+	background-color: #FAFAFA;
+	color: #9D2933;
 }
 
 /* Size Area */
