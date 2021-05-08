@@ -49,6 +49,9 @@
 html{
 	background-color: #FAFAFA;
 	font-family: "Roboto-Regular";
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Element Specific */
@@ -67,9 +70,6 @@ html{
 	text-align: center;
 	opacity: 0.25;
 	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 #fontSelection h2{
@@ -93,10 +93,8 @@ html{
 }
 
 .chosen{
-	background-color: #9D2933 !important;
-	color: #FAFAFA !important;
-	transform: translate3d(0px, 2px, 0px);
-	box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.15), 1.5px 1px 0px 0px rgba(107, 29, 21, 0.5) !important;
+	background-color: #212121 !important;
+	color: #FAFAFA;
 }
 
 #fontSample{
@@ -106,40 +104,73 @@ html{
 
 /* Start Area */
 #startArea{
+	margin: auto auto;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+}
 
+/* Start Menu */
+#startMenu{
+	font-size: 1vw;
+	text-align: center;
+}
+
+#startHeader{
+	font-size: 2vw;
+}
+
+#startInstructions{
+	text-align: center;
+	font-size: 1vw;
+	padding: 1.5vh 0vw 1.5vh 0vw;
+	opacity: 0.5;
+}
+
+#firstTimeInstructions p{
+	
+}
+
+#firstTimeInstructions p:nth-last-of-type(1){
+	margin: 0.25vh 0vw;
 }
 
 /* Settings Area */
 #settingsArea{
 	position: absolute;
-	top: 5vh;
-	right: 5vh;
-	display: inline-block;
-	position: absolute;
 	text-align: right;
 	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	transition: all 0.2s ease-in-out;
 	padding: 0;
-	margin: 0;
-	box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.25);
+	border: 1px solid #212121;
 	background-color: #FAFAFA;
-	border-radius: 5px;
+	width: 25vw;
+	left: 37.5vw;
+	right: 37.5vw;
+	top: 40vh;
+	z-index: 9000;
+}
+
+#settingsShade{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.2);
+	transition: all 0.2s ease-in-out;
 }
 
 #settingsHeader{
 	text-align: center;
 	font-size: 1vw;
 	padding: 1.5vh 0vw 1.5vh 0vw;
-	font-weight: bold;
+}
+
+#settingsArea table{
+	margin: 0 auto;
 }
 
 .settingsTableLabel{
 	text-align: right;
 	font-size: 1vw;
-	padding: 0vh 0.5vw 1.5vh 1vw;
+	padding: 0vh 0vw 1.5vh 1vw;
 }
 
 .settingsTableProperties{
@@ -154,11 +185,9 @@ html{
 	cursor: pointer;
 	background-color: #FAFAFA;
 	margin: 0vh 0.5vw;
-	border-radius: 5px;
-	box-shadow: 4px 4px 3px 0.5px rgba(0, 0, 0, 0.15), 1.5px 3px 0px 0px rgba(0, 0, 0, 0.4);
-	font-weight: bold;
 	font-size: 0.75vw;
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	border: 1px solid #212121;
 }
 
 .langOneButton:nth-last-of-type(3), .langTwoButton:nth-last-of-type(3){
@@ -169,9 +198,9 @@ html{
 	margin: 0;
 }
 
-.langOneButton:hover , .langTwoButton:hover{
-	background-color: #FAFAFA;
-	color: #9D2933;
+.langOneButton:hover, .langTwoButton:hover{
+	background-color: #212121;
+	color: #FAFAFA;
 }
 
 /* Size Area */
@@ -180,25 +209,38 @@ html{
 }
 
 #sizeNum{
-	background-color: #212121;
-	color: #FAFAFA;
-	transition: all 0.2s ease-in-out;
-	padding: 1.5vh 1.5vw;
 	display: inline-block;
+	padding: 1vh 0.5vw;
+	background-color: #FAFAFA;
+	font-size: 0.75vw;
+	transition: all 0.1s ease-in-out;
+	border-top: 1px solid #212121;
+	border-bottom: 1px solid #212121;
 }
 
 .sizeButton{
 	display: inline-block;
-	background-color: #DADADA;
-	color: #212121;
+	padding: 1vh 0.5vw;
 	cursor: pointer;
-	padding: 1.5vh 1.5vw;
-	transition: all 0.2s ease-in-out;
-	font-weight: bold;
+	background-color: #FAFAFA;
+	font-size: 0.75vw;
+	transition: all 0.1s ease-in-out;
+}
+
+.sizeButton:nth-last-of-type(3), .sizeButton:nth-last-of-type(3){
+	border-left: 1px solid #212121;
+	border-top: 1px solid #212121;
+	border-bottom: 1px solid #212121;
+}
+
+.sizeButton:nth-last-of-type(1), .sizeButton:nth-last-of-type(1){
+	border-right: 1px solid #212121;
+	border-top: 1px solid #212121;
+	border-bottom: 1px solid #212121;
 }
 
 .sizeButton:hover{
-	background-color: #787878;
+	background-color: #212121;
 	color: #FAFAFA;
 }
 
@@ -219,9 +261,6 @@ html{
 	width: 100%;
 	text-align: center;
 	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 	font-size: 3vw;
 	padding: 1vh 0vw;
 }
@@ -232,9 +271,6 @@ html{
 	width: 100%;
 	text-align: center;
 	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 	font-size: 3vw;
 	padding: 1vh 0vw;
 	margin-top: 4vh;
@@ -253,6 +289,23 @@ html{
 	color: #FAFAFA;
 }
 
+/* Global Elements */
+#footerInstructions{
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	font-size: 0.75vw;
+	padding: 0vh 0vw 1.5vh 0vw;
+	opacity: 0.5;
+	bottom: 5vh;
+	left: 0vw;
+	right: 0vw;
+}
+
+#footerInstructions p{
+	margin: 0.25vh 0vw;
+}
+
 /* Feedback Stylizations */
 .answerIncorrect{
 	background-color: red !important;
@@ -267,10 +320,11 @@ html{
 .opacityHide{
 	opacity: 0;
 	pointer-events: none;
+	transition: all 0.2s ease-in-out;
 }
 
 .inactiveButton{
-	opacity: 0.25;
+	color: rgba(0,0,0,0.25);
 	pointer-events: none;
 	cursor: default;
 }
